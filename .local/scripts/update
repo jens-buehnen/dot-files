@@ -1,0 +1,8 @@
+#!/bin/env bash
+yay
+doas flatpak update
+brew upgrade
+brew update
+yay -Qtdq | yay -Rns
+yay -Sc --noconfirm
+flatpak uninstall --unused

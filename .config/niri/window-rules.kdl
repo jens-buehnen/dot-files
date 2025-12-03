@@ -1,0 +1,4 @@
+window-rule {
+    match app-id=r#"one.ablaze.floorp$"# title="^Bild-In-Bild$"
+    open-floating true
+}

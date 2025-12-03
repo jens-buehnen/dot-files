@@ -1,0 +1,20 @@
+#!/bin/env bash
+$VIDEO = https://youtu.be/znzXLmLKLpU
+
+test-for-video() {
+  if [ -f ~/.config/niri/video.mkv ]; then
+    start-video
+  else
+    yt-dlp $VIDEO -o ~/.config/niri/video
+  fi
+}
+
+start-video() {
+  if pgrep -x "mpvpaper" >/dev/null; then
+    killall -9 mpvpaper
+  else
+    mpvpaper eDP-1 -o "keep-open=no" ~/.config/niri/video.mkv
+  fi
+}
+
+test-for-video

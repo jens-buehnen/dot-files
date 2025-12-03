@@ -1,0 +1,6 @@
+output "DP-2" {
+    mode "1920x1080@144.042"
+    scale 1
+    transform "normal"
+    position x=1280 y=0
+}

@@ -1,0 +1,8 @@
+spawn-sh-at-startup "waybar"
+spawn-sh-at-startup "wlsunset -l 51.6415 -L 6.7833"
+spawn-sh-at-startup "wl-paste --watch cliphist store"
+spawn-sh-at-startup "~/.local/bin/niri-screen-time -daemon"
+spawn-sh-at-startup "~/.local/bin/chameleos"
+spawn-sh-at-startup "steam -silent"
+spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
+spawn-sh-at-startup "~/.local/bin/stasis" 

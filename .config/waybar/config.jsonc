@@ -1,0 +1,103 @@
+// -*- mode: jsonc -*-
+[
+  {
+      "position": "top",
+      "height": 30, // Waybar height (to be removed for auto height)
+      "spacing": 4, // Gaps between modules (4px)
+      "modules-left": [
+      "niri/workspaces",
+      "clock",
+      ],
+      "modules-center": [
+      "niri/window",
+      ],
+      "modules-right": [
+      "tray",
+      "pulseaudio",
+      "cpu",
+      "memory",
+      "temperature",
+      ],
+      "tray": {
+          "spacing": 10
+      },
+      "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+          "active": "L"
+        }
+      },
+      "clock": {
+          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+          "format-alt": "{:%Y-%m-%d}"
+      },
+      "cpu": {
+          "format": "{usage}%  ",
+          "tooltip": true,
+          "on-click": "ghostty -e btop"
+      },
+      "memory": {
+          "format": "{}%  "
+      },
+      "temperature": {
+          "critical-threshold": 80,
+          "format": "{temperatureC}°C  "
+      },
+      "backlight": {
+          "format": "{percent}% 󰃞 "
+
+      },
+      "battery": {
+          "states": {
+              "warning": 30,
+              "critical": 15
+          },
+          "format": "{capacity}% {icon}",
+          "format-full": "{capacity}% {icon}",
+          "format-charging": "{capacity}% Charging",
+          "format-plugged": "{capacity}% Pluged In",
+          "format-alt": "{time} {icon}",
+          "format-icons": ["", "", "", "", ""]
+      },
+      "network": {
+          "format-wifi": "{essid} ({signalStrength}%)",
+          "format-ethernet": "{ipaddr}/{cidr}",
+          "tooltip-format": "{ifname} via {gwaddr}",
+          "format-linked": "{ifname} (No IP)",
+          "format-disconnected": "DISCONECTED",
+          "format-alt": "{ifname}: {ipaddr}/{cidr}"
+      },
+      "pulseaudio": {
+          "format": "{volume}% {icon} {format_source}",
+          "format-bluetooth": "{volume}% {icon} {format_source}",
+          "format-bluetooth-muted": "Muted {icon} {format_source}",
+          "format-muted": "Muted {format_source}",
+          "format-source": "{volume}% ",
+          "format-source-muted": "",
+          "format-icons": {
+              "headphone": "",
+              "headset": "Headset",
+              "default": ["", "", ""]
+          },
+          "on-click": "pavucontrol"
+      },
+      "custom/media": {
+          "format": "Music {text}",
+          "return-type": "json",
+          "max-length": 40,
+          "escape": true
+      },
+      "custom/power": {
+         "format" : "⏻ ",
+		    "tooltip": false,
+		  "menu": "on-click",
+		  "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		  "menu-actions": {
+			  "shutdown": "shutdown",
+			  "reboot": "reboot",
+			  "suspend": "systemctl suspend",
+			  "hibernate": "systemctl hibernate"
+		  }
+      }
+  }
+]

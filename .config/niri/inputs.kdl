@@ -1,0 +1,14 @@
+input {
+    keyboard {
+        xkb {
+            layout "de"
+        }
+    }
+    touchpad {
+        tap
+        natural-scroll
+        disabled-on-external-mouse
+    }
+    warp-mouse-to-focus mode="center-xy-always"
+    focus-follows-mouse max-scroll-amount="25%"
+}
