@@ -6,4 +6,3 @@ brew update
 yay -Qtdq | yay -Rns
 yay -Sc --noconfirm
 flatpak uninstall --unused
-~/.local/scripts/update-dots
