@@ -4,11 +4,7 @@ bind ctrl-f zi
 bind ctrl-y yayf
 bind ctrl-r _fzf_search_history
 if status is-interactive
-    if [ (math (random)'%2') -eq 1 ]
-        hyfetch
-    else
-        hyfetch -p femboy
-    end
+    hyfetch
 end
 zoxide init fish | source
 starship init fish | source
