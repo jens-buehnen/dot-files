@@ -144,3 +144,5 @@ sed -i 's|/$arch/|/$arch_v4/|g' "${MIRRORS_DEFAULT_DIR}/cachyos-v4-mirrorlist"
 # /etc/pacman.conf and can't read the "include"ded mirror files. By default, Aura intentionally runs without root
 # permissions for most non-modify operations.
 chmod go+r "${MIRRORS_DEFAULT_DIR}"/*mirrorlist*
+
+pacman -Sy
