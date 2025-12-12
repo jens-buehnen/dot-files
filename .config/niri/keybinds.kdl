@@ -1,5 +1,5 @@
 binds {
-    Super+Shift+S { spawn-sh "~/.local/bin/chamel toggle"; }
+    Super+Shift+S { spawn-sh "chamel toggle"; }
     Mod+Return { spawn "ghostty"; }
     Mod+Alt+Y { spawn-sh "~/.config/niri/restart-bar"; }
     Mod+E { spawn-sh "ghostty -e ranger"; }
@@ -9,7 +9,6 @@ binds {
     Mod+B { spawn-sh "xdg-open https:"; }
     Mod+O { spawn-sh "wlogout"; }
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
-    Super+Shift+Ctrl+Alt+ISO_Level3_Shift+T hotkey-overlay-title=null { spawn-sh "~/.config/niri/wallpaper-script"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ && pw-cat -p /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- && pw-cat -p /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
