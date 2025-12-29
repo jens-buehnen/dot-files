@@ -1,0 +1,18 @@
+gestures {
+  hot-corners {
+    off
+  }
+}
+prefer-no-csd
+environment {
+  QT_QPA_PLATFORMTHEME "gtk3"
+  TERMINAL "ghostty"
+  EDITOR "nvim"
+}
+cursor {
+  xcursor-theme "Bibata-Original-Classic"
+}
+screenshot-path "~/Bilder/Screenshots/Screenshot von %Y-%m-%d %H-%M-%S.png"
+hotkey-overlay {
+  skip-at-startup
+}
