@@ -1,1 +1,2 @@
-set EDITOR nvim
+export EDITOR='nvim'
+export MANPAGER='nvim +Man!'
