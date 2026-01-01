@@ -37,7 +37,7 @@
           "on-click": "ghostty -e btop"
       },
       "memory": {
-          "format": " Ram:{}%"
+          "format": " RAM:{}%"
       },
       "temperature": {
           "critical-threshold": 80,
