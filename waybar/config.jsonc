@@ -32,32 +32,20 @@
           "format-alt": "{:%Y-%m-%d}"
       },
       "cpu": {
-          "format": "{usage}%  ",
+          "format": " CPU:{usage}%",
           "tooltip": true,
           "on-click": "ghostty -e btop"
       },
       "memory": {
-          "format": "{}%  "
+          "format": " Ram:{}%"
       },
       "temperature": {
           "critical-threshold": 80,
-          "format": "{temperatureC}°C  "
+          "format": " Temp:{temperatureC}°C"
       },
       "backlight": {
-          "format": "{percent}% 󰃞 "
+          "format": " Bright:{percent}%"
 
-      },
-      "battery": {
-          "states": {
-              "warning": 30,
-              "critical": 15
-          },
-          "format": "{capacity}% {icon}",
-          "format-full": "{capacity}% {icon}",
-          "format-charging": "{capacity}% Charging",
-          "format-plugged": "{capacity}% Pluged In",
-          "format-alt": "{time} {icon}",
-          "format-icons": ["", "", "", "", ""]
       },
       "network": {
           "format-wifi": "{essid} ({signalStrength}%)",
@@ -68,36 +56,9 @@
           "format-alt": "{ifname}: {ipaddr}/{cidr}"
       },
       "pulseaudio": {
-          "format": "{volume}% {icon} {format_source}",
-          "format-bluetooth": "{volume}% {icon} {format_source}",
-          "format-bluetooth-muted": "Muted {icon} {format_source}",
-          "format-muted": "Muted {format_source}",
-          "format-source": "{volume}% ",
-          "format-source-muted": "",
-          "format-icons": {
-              "headphone": "",
-              "headset": "Headset",
-              "default": ["", "", ""]
-          },
+          "format": " Vol:{volume}%",
+          "format-muted": " Muted",
           "on-click": "pavucontrol"
       },
-      "custom/media": {
-          "format": "Music {text}",
-          "return-type": "json",
-          "max-length": 40,
-          "escape": true
-      },
-      "custom/power": {
-         "format" : "⏻ ",
-		    "tooltip": false,
-		  "menu": "on-click",
-		  "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		  "menu-actions": {
-			  "shutdown": "shutdown",
-			  "reboot": "reboot",
-			  "suspend": "systemctl suspend",
-			  "hibernate": "systemctl hibernate"
-		  }
-      }
   }
 ]
