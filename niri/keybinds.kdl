@@ -121,6 +121,6 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Ctrl+Alt+Delete { quit; }
     Mod+Shift+P { power-off-monitors; }
-    Mod+Alt+E { spawn "neovide"; }
-    Mod+Shift+E { spawn "bemoji"; }
+    Mod+Alt+E { spawn "bemoji"; }
+    Mod+Shift+E { spawn-sh "ghostty -e nvim"; }
 }
