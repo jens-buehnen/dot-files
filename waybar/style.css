@@ -1,2 +1,5 @@
 @import "mocha.css";
-
+.bar { 
+  font-family: JetBrainsMono NFM;
+  font-size: 16px;
+} 

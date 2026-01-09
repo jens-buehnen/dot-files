@@ -1,9 +1,9 @@
-// -*- mode: jsonc -*-
 [
   {
+      "name": "bar",
       "position": "top",
-      "height": 30, // Waybar height (to be removed for auto height)
-      "spacing": 4, // Gaps between modules (4px)
+      "height": 30,
+      "spacing": 4,
       "modules-left": [
       "niri/workspaces",
       "clock",
@@ -14,6 +14,7 @@
       "modules-right": [
       "tray",
       "pulseaudio",
+      "bluetooth",
       "cpu",
       "memory",
       "temperature",
@@ -24,7 +25,7 @@
       "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
-          "active": "L"
+          "active": "l"
         }
       },
       "clock": {
@@ -32,21 +33,26 @@
           "format-alt": "{:%Y-%m-%d}"
       },
       "cpu": {
-          "format": " CPU:{usage}%",
+          "format": "CPU:{usage}%",
           "interval": 2,
           "tooltip": true,
           "on-click": "ghostty -e btop"
       },
       "memory": {
-          "format": " RAM:{}%",
+          "format": "RAM:{}%",
           "interval": 6
       },
       "temperature": {
           "critical-threshold": 80,
-          "format": " Temp:{temperatureC}°C"
+          "format": "Temp:{temperatureC}°C"
+      },
+      "bluetooth": {
+        "format": "Blu:{status}",
+        "format-connected": "Blu:{num_connections} Dev",
+        "on-click": "ghostty -e bluetui",
       },
       "backlight": {
-          "format": " Bright:{percent}%"
+          "format": "Bright:{percent}%"
 
       },
       "network": {
@@ -58,8 +64,8 @@
           "format-alt": "{ifname}: {ipaddr}/{cidr}"
       },
       "pulseaudio": {
-          "format": " Vol:{volume}%",
-          "format-muted": " Muted",
+          "format": "Vol:{volume}%",
+          "format-muted": "Muted",
           "on-click": "ghostty -e wiremix"
       },
   }
