@@ -12,7 +12,6 @@ environment {
 cursor {
   xcursor-theme "Bibata-Original-Classic"
 }
-screenshot-path "~/Bilder/Screenshots/Screenshot von %Y-%m-%d %H-%M-%S.png"
 hotkey-overlay {
   skip-at-startup
 }
