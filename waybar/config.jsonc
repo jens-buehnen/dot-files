@@ -33,38 +33,30 @@
           "format-alt": "{:%Y-%m-%d}"
       },
       "cpu": {
-          "format": "CPU:{usage}%",
+          "format": "[CPU:{usage}%]",
           "interval": 2,
           "tooltip": true,
           "on-click": "ghostty -e btop"
       },
       "memory": {
-          "format": "RAM:{}%",
+          "format": "[RAM:{}%]",
           "interval": 6
       },
       "temperature": {
           "critical-threshold": 80,
-          "format": "Temp:{temperatureC}°C"
+          "format": "[Temp:{temperatureC}°C]"
       },
       "bluetooth": {
-        "format": "Blu:{status}",
-        "format-connected": "Blu:{num_connections} Dev",
+        "format": "[Blu:{status}]",
+        "format-connected": "[Blu:{num_connections} Dev]",
         "on-click": "ghostty -e bluetui",
       },
       "backlight": {
-          "format": "Bright:{percent}%"
+          "format": "[Bright:{percent}%]"
 
       },
-      "network": {
-          "format-wifi": "{essid} ({signalStrength}%)",
-          "format-ethernet": "{ipaddr}/{cidr}",
-          "tooltip-format": "{ifname} via {gwaddr}",
-          "format-linked": "{ifname} (No IP)",
-          "format-disconnected": "DISCONECTED",
-          "format-alt": "{ifname}: {ipaddr}/{cidr}"
-      },
       "pulseaudio": {
-          "format": "Vol:{volume}%",
+          "format": "[Vol:{volume}%]",
           "format-muted": "Muted",
           "on-click": "ghostty -e wiremix"
       },
