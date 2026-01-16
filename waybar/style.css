@@ -3,3 +3,10 @@ window#waybar {
   font-family: JetBrainsMono NFM;
   font-size: 16px;
 }
+#workspaces button {
+    padding: 0 2px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
