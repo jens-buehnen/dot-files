@@ -6,10 +6,12 @@
       "spacing": 4,
       "modules-left": [
       "niri/workspaces",
-      "clock",
+      "dwl/tags",
+      "niri/window",
+      "dwl/window",
       ],
       "modules-center": [
-      "niri/window",
+      "clock",
       ],
       "modules-right": [
       "tray",
