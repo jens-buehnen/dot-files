@@ -1,8 +1,6 @@
-alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias zl='eza -al --color=always --group-directories-first --icons'
 alias za='eza -alh --color=always --group-directories-first --icons'
 alias zt='eza -aT --color=always --group-directories-first --icons'
-alias z.="eza -a | grep -e '^\.'"
 alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias fixpacman="sudo rm -rf /var/lib/pacman/db.lck"
 alias wget='wget -c '
@@ -53,5 +51,4 @@ alias vi='nvim'
 alias lb='/opt/ladybird/usr/bin/Ladybird'
 alias vid='mpv --vo=tct --really-quiet yes --profile=sw-fast'
 alias qpush='git add . && git commit -m update && git push'
-alias screen-time='niri-screen-time -from 1970-01-01 | nvim -R'
 alias update='topgrade'
