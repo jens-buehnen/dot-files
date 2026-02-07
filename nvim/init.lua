@@ -1,8 +1,12 @@
 require("config.lazy")
 vim.cmd.colorscheme("catppuccin")
-require("mini.snippets").setup()
 require("mini.cmdline").setup()
 require("mini.tabline").setup()
+require("mini.snippets").setup()
+require("mini.comment").setup()
+require("mini.cursorword").setup()
+require("oil").setup()
+require("modicator").setup()
 require("lualine").setup()
 require("conform").setup({
 	formatters_by_ft = {
