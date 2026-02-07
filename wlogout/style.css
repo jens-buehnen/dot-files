@@ -26,25 +26,25 @@ button:focus, button:active, button:hover {
 	outline-style: none;
 }
 #lock {
-    background-image: url("/usr/share/wlogout/assets/lock.svg");
+    background-image: url("/usr/share/catppuccin/wlogout/assets/lock.svg");
 }
 
-#logout {
-    background-image: url("/usr/share/wlogout/assets/logout.svg");
+#soft-reboot {
+    background-image: url("/usr/share/catppuccin/wlogout/assets/reboot.svg");
 }
 
 #suspend {
-    background-image: url("/usr/share/wlogout/assets/suspend.svg");
+    background-image: url("/usr/share/catppuccin/wlogout/assets/suspend.svg");
 }
 
 #hibernate {
-    background-image: url("/usr/share/wlogout/assets/hibernate.svg");
+    background-image: url("/usr/share/catppuccin/wlogout/assets/hibernate.svg");
 }
 
 #shutdown {
-    background-image: url("/usr/share/wlogout/assets/shutdown.svg");
+    background-image: url("/usr/share/catppuccin/wlogout/assets/shutdown.svg");
 }
 
 #reboot {
-    background-image: url("/usr/share/wlogout/assets/reboot.svg");
+    background-image: url("/usr/share/catppuccin/wlogout/assets/reboot.svg");
 }

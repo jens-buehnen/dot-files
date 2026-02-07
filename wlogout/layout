@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "$HOME/.config/hypr/scripts/LockScreen.sh",
+    "action" : "swaylock",
     "text" : "Lock",
     "keybind" : "l"
 }
@@ -17,9 +17,9 @@
     "keybind" : "s"
 }
 {
-    "label" : "logout",
-    "action" : "hyprctl dispatch exit 0",
-    "text" : "Logout",
+    "label" : "soft-reboot",
+    "action" : "systemctl soft-reboot",
+    "text" : "Soft-reboot",
     "keybind" : "e"
 }
 {
