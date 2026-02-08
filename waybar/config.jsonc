@@ -38,7 +38,7 @@
           "format": "[CPU:{usage}%]",
           "interval": 2,
           "tooltip": true,
-          "on-click": "ghostty -e btop"
+          "on-click": "alacritty -e btop"
       },
       "memory": {
           "format": "[RAM:{}%]",
@@ -51,7 +51,7 @@
       "bluetooth": {
         "format": "[Blu:{status}]",
         "format-connected": "[Blu:{num_connections} Dev]",
-        "on-click": "ghostty -e bluetui",
+        "on-click": "alacritty -e bluetui",
       },
       "backlight": {
           "format": "[Bright:{percent}%]"
@@ -60,7 +60,7 @@
       "pulseaudio": {
           "format": "[Vol:{volume}%]",
           "format-muted": "Muted",
-          "on-click": "ghostty -e wiremix"
+          "on-click": "alacritty -e wiremix"
       },
   }
 ]
