@@ -66,23 +66,10 @@ color = "#f5e0dc"
 
 [font]
 size = 14.0
-
-[font.bold]
-family = "JetBrainsMonoNL NFM"
-style = "Bold"
-
-[font.bold_italic]
-family = "JetBrainsMonoNL NFM"
-style = "Bold Italic"
-
-[font.italic]
-family = "JetBrainsMonoNL NFM"
-style = "Italic"
-
-[font.normal]
-family = "JetBrainsMonoNL NFM"
-style = "Regular"
+normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Medium Italic" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 
 [cursor.style]
-shape = "Beam"
-blinking = "On"
+blinking = "Always"
