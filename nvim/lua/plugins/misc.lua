@@ -25,4 +25,7 @@ return {
 		vim.o.termguicolors = true
 	end,
 	opts = {},
+	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
+	build = ":TSUpdate",
 }
