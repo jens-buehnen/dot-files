@@ -2,7 +2,6 @@ return {
 	{ "nvim-mini/mini.nvim", version = false },
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	"stevearc/oil.nvim",
-	opts = {},
 	dependencies = { { "nvim-mini/mini.icons", opts = {} } },
 	lazy = false,
 	"nvim-lualine/lualine.nvim",
@@ -11,7 +10,6 @@ return {
 	"folke/trouble.nvim",
 	"folke/noice.nvim",
 	event = "VeryLazy",
-	opts = {},
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 		"rcarriga/nvim-notify",
@@ -24,8 +22,18 @@ return {
 		vim.o.number = true
 		vim.o.termguicolors = true
 	end,
-	opts = {},
 	"nvim-treesitter/nvim-treesitter",
 	lazy = false,
 	build = ":TSUpdate",
+	"folke/which-key.nvim",
+	event = "VeryLazy",
+	keys = {
+		{
+			"<leader>?",
+			function()
+				require("which-key").show({ global = false })
+			end,
+			desc = "Buffer Local Keymaps (which-key)",
+		},
+	},
 }
