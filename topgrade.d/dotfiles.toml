@@ -1,0 +1,2 @@
+[commands]
+"Dotfiles" = "/usr/bin/dotfiles-cli -u"
