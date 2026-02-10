@@ -1,3 +1,5 @@
 vo=gpu-next
 sub-font=JetBrainsMono NFM
 osd-font=JetBrainsMono NFM
+profile=fast
+hwdec=auto
