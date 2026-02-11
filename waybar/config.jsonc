@@ -19,6 +19,7 @@
       "bluetooth",
       "cpu",
       "memory",
+      "battery",
       "temperature",
       ],
       "tray": {
@@ -55,7 +56,15 @@
       },
       "backlight": {
           "format": "[Bright:{percent}%]"
-
+      },
+      "battery": {
+          "interval": 30,
+	  "status": {
+              "warning": 30,
+	      "critical": 15
+	  },
+	  "format": "[Bat:{capacity}%]",
+	  "on-click": "alacritty -e jolt"
       },
       "pulseaudio": {
           "format": "[Vol:{volume}%]",
