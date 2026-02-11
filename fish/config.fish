@@ -4,7 +4,9 @@ bind ctrl-f zi
 bind ctrl-y yayf
 bind ctrl-r _fzf_search_history
 if status is-interactive
-    hyfetch
+    if command -v hyfetch >/dev/null
+        hyfetch
+    end
 end
 zoxide init fish | source
 starship init fish | source
