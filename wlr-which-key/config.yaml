@@ -35,7 +35,7 @@ menu:
   - key: "f"
     desc: Open Freetube
     cmd: /opt/FreeTube/freetube
-  - key: "e"
+  - key: "u"
     desc: Power
     submenu:
       - key: "s"
@@ -53,3 +53,9 @@ menu:
   - key: "p"
     desc: Open Pandora
     cmd: pandora
+  - key: "l"
+    desc: Lock
+    cmd: swaylock
+  - key: e
+    desc: Open Bemoji
+    cmd: bemoji
