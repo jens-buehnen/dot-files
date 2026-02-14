@@ -35,6 +35,18 @@ menu:
   - key: "f"
     desc: Open Freetube
     cmd: /opt/FreeTube/freetube
+  - key: "s"
+    desc: Open Steam
+    cmd: steam
+  - key: "p"
+    desc: Open Pandora
+    cmd: pandora
+  - key: e
+    desc: Open Bemoji
+    cmd: bemoji
+  - key: "l"
+    desc: Lock
+    cmd: swaylock
   - key: "u"
     desc: Power
     submenu:
@@ -47,15 +59,3 @@ menu:
       - key: "e"
         desc: Soft-reboot
         cmd: systemctl soft-reboot
-  - key: "s"
-    desc: Open Steam
-    cmd: steam
-  - key: "p"
-    desc: Open Pandora
-    cmd: pandora
-  - key: "l"
-    desc: Lock
-    cmd: swaylock
-  - key: e
-    desc: Open Bemoji
-    cmd: bemoji
