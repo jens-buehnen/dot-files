@@ -44,9 +44,6 @@ menu:
   - key: e
     desc: Open Bemoji
     cmd: bemoji
-  - key: "l"
-    desc: Lock
-    cmd: swaylock
   - key: "u"
     desc: Power
     submenu:
@@ -59,3 +56,6 @@ menu:
       - key: "e"
         desc: Soft-reboot
         cmd: systemctl soft-reboot
+      - key: "l"
+        desc: Lock
+        cmd: swaylock
