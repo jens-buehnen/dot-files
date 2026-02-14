@@ -1,0 +1,55 @@
+font: JetBrainsMono Nerd Font 14
+background: "#1e1e2e"
+color: "#cdd6f4"
+border: "#f5c2e7"
+separator: " ➜ "
+border_width: 2
+corner_r: 0
+padding: 3 # Defaults to corner_r
+rows_per_column: 8 # No limit by default
+column_padding: 25 # Defaults to padding
+
+# Anchor and margin
+anchor: center # One of center, left, right, top, bottom, bottom-left, top-left, etc.
+# Only relevant when anchor is not center
+margin_right: 0
+margin_bottom: 0
+margin_left: 0
+margin_top: 0
+
+
+# Permits key bindings that conflict with compositor key bindings.
+# Default is `false`.
+inhibit_compositor_keyboard_shortcuts: true
+
+# Try to guess the correct keyboard layout to use. Default is `false`.
+auto_kbd_layout: true
+
+menu:
+  - key: "d"
+    desc: Open Fuzzel
+    cmd: fuzzel
+  - key: "a"
+    desc: Open Alacritty
+    cmd: alacritty
+  - key: "f"
+    desc: Open Freetube
+    cmd: /opt/FreeTube/freetube
+  - key: "e"
+    desc: Power
+    submenu:
+      - key: "s"
+        desc: Shutdown
+        cmd: systemctl poweroff
+      - key: "r"
+        desc: Reboot
+        cmd: systemctl reboot
+      - key: "e"
+        desc: Soft-reboot
+        cmd: systemctl soft-reboot
+  - key: "s"
+    desc: Open Steam
+    cmd: steam
+  - key: "p"
+    desc: Open Pandora
+    cmd: pandora
