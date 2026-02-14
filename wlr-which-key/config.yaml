@@ -31,9 +31,12 @@ menu:
   - key: "p"
     desc: Open Pandora
     cmd: pandora
-  - key: e
+  - key: "e"
     desc: Open Bemoji
     cmd: bemoji
+  - key: "b"
+    desc: Open Browser
+    cmd: xdg-open http:
   - key: "u"
     desc: Power
     submenu:
