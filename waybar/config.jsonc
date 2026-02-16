@@ -68,7 +68,7 @@
       },
       "pulseaudio": {
           "format": "[Vol:{volume}%]",
-          "format-muted": "Muted",
+          "format-muted": "[Vol:Muted]",
           "on-click": "alacritty -e wiremix"
       },
   }
