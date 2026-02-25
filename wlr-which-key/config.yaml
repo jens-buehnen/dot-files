@@ -49,6 +49,9 @@ menu:
       - key: "e"
         desc: Soft-reboot
         cmd: systemctl soft-reboot
+      - key: "f"
+        desc: Reboot into firmware-setup
+        cmd: systemctl reboot --firmware-setup
       - key: "l"
         desc: Lock
         cmd: swaylock
