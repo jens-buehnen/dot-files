@@ -50,7 +50,7 @@ menu:
         desc: Soft-reboot
         cmd: systemctl soft-reboot
       - key: "f"
-        desc: Reboot into firmware-setup
+        desc: Firmware-setup
         cmd: systemctl reboot --firmware-setup
       - key: "l"
         desc: Lock
