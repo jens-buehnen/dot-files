@@ -9,6 +9,7 @@ return {
 		explorer = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
+		terminal = { enable = true },
 		notifier = {
 			enabled = true,
 			timeout = 3000,
@@ -507,7 +508,7 @@ return {
 			desc = "Dismiss All Notifications",
 		},
 		{
-			"<c-/>",
+			"<c-ö>",
 			function()
 				Snacks.terminal()
 			end,
