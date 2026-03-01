@@ -8,10 +8,10 @@
       "niri/workspaces",
       "dwl/tags",
       "niri/window",
-      "dwl/window",
+      "dwl/window"
       ],
       "modules-center": [
-      "clock",
+      "clock"
       ],
       "modules-right": [
       "tray",
@@ -20,7 +20,7 @@
       "cpu",
       "memory",
       "battery",
-      "temperature",
+      "temperature"
       ],
       "tray": {
           "spacing": 10
