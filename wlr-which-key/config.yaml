@@ -37,6 +37,9 @@ menu:
   - key: "b"
     desc: Open Browser
     cmd: "xdg-open http:"
+  - key: q
+    desc: Open Qalculate
+    cmd: qalculate-gtk
   - key: "u"
     desc: Power
     submenu:
