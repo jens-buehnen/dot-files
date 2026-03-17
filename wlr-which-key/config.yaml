@@ -6,7 +6,7 @@ separator: ":"
 border_width: 2
 corner_r: 0
 padding: 3
-rows_per_column: 8
+rows_per_column: 12
 column_padding: 25
 anchor: center
 margin_right: 0
