@@ -1,5 +1,6 @@
 [
   {
+      "layer": "top",
       "name": "bar",
       "position": "top",
       "height": 30,
@@ -52,7 +53,7 @@
       "bluetooth": {
         "format": "[Blu:{status}]",
         "format-connected": "[Blu:{num_connections} Dev]",
-        "on-click": "alacritty -e bluetui",
+        "on-click": "alacritty -e bluetui"
       },
       "backlight": {
           "format": "[Bright:{percent}%]"
@@ -70,6 +71,6 @@
           "format": "[Vol:{volume}%]",
           "format-muted": "[Vol:Muted]",
           "on-click": "alacritty -e wiremix"
-      },
+      }
   }
 ]
