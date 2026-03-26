@@ -8,3 +8,4 @@ if status is-interactive
         hyfetch
     end
 end
+fish_vi_key_bindings
