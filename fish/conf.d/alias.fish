@@ -1,8 +1,8 @@
 alias zl='eza -al --color=always --group-directories-first --icons'
 alias za='eza -alh --color=always --group-directories-first --icons'
 alias zt='eza -aT --color=always --group-directories-first --icons'
-alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias fixpacman="sudo rm -rf /var/lib/pacman/db.lck"
+alias grubup="doas grub-mkconfig -o /boot/grub/grub.cfg"
+alias fixpacman="doas rm -rf /var/lib/pacman/db.lck"
 alias wget='wget -c '
 alias ..='cd ..'
 alias ...='cd ../..'
