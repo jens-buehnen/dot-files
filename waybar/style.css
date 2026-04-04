@@ -8,19 +8,3 @@ window#waybar {
   background-color: transparent;
   color: #ffffff;
 }
-
-#tags button {
-  padding: 0 0px;
-  background-color: transparent;
-  color: #ffffff;
-}
-
-#tags button:not(.occupied):not(.focused) {
-  font-size: 0;
-  min-width: 0;
-  min-height: 0;
-  margin: 0px;
-  padding: 0;
-  color: transparent;
-  background-color: transparent;
-}

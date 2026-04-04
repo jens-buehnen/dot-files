@@ -6,9 +6,7 @@
       "height": 30,
       "spacing": 4,
       "modules-left": [
-      "niri/workspaces",
-      "dwl/tags",
-      "niri/window",
+      "ext/workspaces",
       "dwl/window"
       ],
       "modules-center": [
