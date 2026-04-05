@@ -66,6 +66,9 @@
       "format" : "[Bat:{capacity}%]",
       "on-click" : "alacritty -e jolt"
     },
+    "dwl/window": {
+    "format": "[{layout}] {title}"
+    },
     "pulseaudio" : {
       "format" : "[Vol:{volume}%]",
       "format-muted" : "[Vol:Muted]",
