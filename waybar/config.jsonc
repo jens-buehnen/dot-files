@@ -39,7 +39,7 @@
       "format" : "[CPU:{usage}%]",
       "interval" : 2,
       "tooltip" : true,
-      "on-click" : "alacritty -e btop"
+      "on-click" : "alacritty -e btm"
     },
     "memory" : {
       "format" : "[RAM:{}%]",
