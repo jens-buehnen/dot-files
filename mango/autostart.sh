@@ -1,5 +1,6 @@
 #/usr/bin/env bash
 
+wlr-randr --output eDP-1 --scale 1.6
 wlr-randr --output DP-2 --mode 1920x1080@144.042007Hz
 waybar &
 wl-clip-persist --clipboard both &
