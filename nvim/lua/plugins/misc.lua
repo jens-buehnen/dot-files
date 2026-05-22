@@ -22,9 +22,6 @@ return {
 		vim.o.number = true
 		vim.o.termguicolors = true
 	end,
-	"nvim-treesitter/nvim-treesitter",
-	lazy = false,
-	build = ":TSUpdate",
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 	keys = {
