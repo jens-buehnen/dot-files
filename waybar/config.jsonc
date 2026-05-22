@@ -1,18 +1,18 @@
 [
   {
-    "layer" : "top",
-    "name" : "bar",
-    "position" : "top",
-    "height" : 30,
-    "spacing" : 4,
-    "modules-left" : [
+    "layer": "top",
+    "name": "bar",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": [
       "ext/workspaces",
       "dwl/window"
     ],
-    "modules-center" : [
+    "modules-center": [
       "clock"
     ],
-    "modules-right" : [
+    "modules-right": [
       "tray",
       "pulseaudio",
       "bluetooth",
@@ -21,58 +21,58 @@
       "battery",
       "temperature"
     ],
-    "tray" : {
-      "spacing" : 10
+    "tray": {
+      "spacing": 10
     },
-    "ext/workspaces" : {
-      "format" : "{icon}",
-      "ignore-hidden" : true,
-      "on-click" : "activate",
-      "on-click-right" : "deactivate",
-      "sort-by-id" : true
+    "ext/workspaces": {
+      "format": "{icon}",
+      "ignore-hidden": true,
+      "on-click": "activate",
+      "on-click-right": "deactivate",
+      "sort-by-id": true
     },
-    "clock" : {
-      "tooltip-format" : "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format-alt" : "{:%Y-%m-%d}"
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%Y-%m-%d}"
     },
-    "cpu" : {
-      "format" : "[CPU:{usage}%]",
-      "interval" : 2,
-      "tooltip" : true,
-      "on-click" : "alacritty -e btm"
+    "cpu": {
+      "format": "[CPU:{usage}%]",
+      "interval": 2,
+      "tooltip": true,
+      "on-click": "alacritty -e btm"
     },
-    "memory" : {
-      "format" : "[RAM:{}%]",
-      "interval" : 6
+    "memory": {
+      "format": "[RAM:{}%]",
+      "interval": 6
     },
-    "temperature" : {
-      "critical-threshold" : 80,
-      "format" : "[Temp:{temperatureC}°C]"
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "[Temp:{temperatureC}°C]"
     },
-    "bluetooth" : {
-      "format" : "[Blu:{status}]",
-      "format-connected" : "[Blu:{num_connections} Dev]",
-      "on-click" : "alacritty -e bluetui"
+    "bluetooth": {
+      "format": "[Blu:{status}]",
+      "format-connected": "[Blu:{num_connections} Dev]",
+      "on-click": "alacritty -e bluetui"
     },
-    "backlight" : {
-      "format" : "[Bright:{percent}%]"
+    "backlight": {
+      "format": "[Bright:{percent}%]"
     },
-    "battery" : {
-      "interval" : 30,
-      "status" : {
-        "warning" : 30,
-        "critical" : 15
+    "battery": {
+      "interval": 30,
+      "status": {
+        "warning": 30,
+        "critical": 15
       },
-      "format" : "[Bat:{capacity}%]",
-      "on-click" : "alacritty -e jolt"
+      "format": "[Bat:{capacity}%]",
+      "on-click": "alacritty -e jolt"
     },
     "dwl/window": {
-    "format": "[{layout}] {title}"
+      "format": "[{layout}] {title}"
     },
-    "pulseaudio" : {
-      "format" : "[Vol:{volume}%]",
-      "format-muted" : "[Vol:Muted]",
-      "on-click" : "alacritty -e wiremix"
+    "pulseaudio": {
+      "format": "[Vol:{volume}%]",
+      "format-muted": "[Vol:Muted]",
+      "on-click": "alacritty -e wiremix"
     }
   }
 ]

@@ -10,10 +10,7 @@ return {
 		indent = { enabled = true },
 		input = { enabled = true },
 		terminal = { enable = true },
-		notifier = {
-			enabled = true,
-			timeout = 3000,
-		},
+		notifier = { enabled = true, timeout = 3000 },
 		picker = { enabled = true },
 		quickfile = { enabled = true },
 		scope = { enabled = true },
@@ -162,8 +159,7 @@ return {
 				Snacks.picker.git_log_file()
 			end,
 			desc = "Git Log File",
-		},
-		-- gh
+		}, -- gh
 		{
 			"<leader>gi",
 			function()
@@ -191,8 +187,7 @@ return {
 				Snacks.picker.gh_pr({ state = "all" })
 			end,
 			desc = "GitHub Pull Requests (all)",
-		},
-		-- Grep
+		}, -- Grep
 		{
 			"<leader>sb",
 			function()
@@ -221,8 +216,7 @@ return {
 			end,
 			desc = "Visual selection or word",
 			mode = { "n", "x" },
-		},
-		-- search
+		}, -- search
 		{
 			'<leader>s"',
 			function()
@@ -369,8 +363,7 @@ return {
 				Snacks.picker.colorschemes()
 			end,
 			desc = "Colorschemes",
-		},
-		-- LSP
+		}, -- LSP
 		{
 			"gd",
 			function()
@@ -434,8 +427,7 @@ return {
 				Snacks.picker.lsp_workspace_symbols()
 			end,
 			desc = "LSP Workspace Symbols",
-		},
-		-- Other
+		}, -- Other
 		{
 			"<leader>z",
 			function()
@@ -584,11 +576,18 @@ return {
 				Snacks.toggle.diagnostics():map("<leader>ud")
 				Snacks.toggle.line_number():map("<leader>ul")
 				Snacks.toggle
-					.option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 })
+					.option("conceallevel", {
+						off = 0,
+						on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2,
+					})
 					:map("<leader>uc")
 				Snacks.toggle.treesitter():map("<leader>uT")
 				Snacks.toggle
-					.option("background", { off = "light", on = "dark", name = "Dark Background" })
+					.option("background", {
+						off = "light",
+						on = "dark",
+						name = "Dark Background",
+					})
 					:map("<leader>ub")
 				Snacks.toggle.inlay_hints():map("<leader>uh")
 				Snacks.toggle.indent():map("<leader>ug")
@@ -596,4 +595,31 @@ return {
 			end,
 		})
 	end,
+	---@class snacks.bigfile.Config
+	---@field enabled? boolean
+	{
+		notify = true, -- show notification when big file detected
+		size = 1.5 * 1024 * 1024, -- 1.5MB
+		line_length = 1000, -- average line length (useful for minified files)
+		-- Enable or disable features when big file detected
+		---@param ctx {buf: number, ft:string}
+		setup = function(ctx)
+			if vim.fn.exists(":NoMatchParen") ~= 0 then
+				vim.cmd([[NoMatchParen]])
+			end
+			Snacks.util.wo(0, {
+				foldmethod = "manual",
+				statuscolumn = "",
+				conceallevel = 0,
+			})
+			vim.b.completion = false
+			vim.b.minianimate_disable = true
+			vim.b.minihipatterns_disable = true
+			vim.schedule(function()
+				if vim.api.nvim_buf_is_valid(ctx.buf) then
+					vim.bo[ctx.buf].syntax = ctx.ft
+				end
+			end)
+		end,
+	},
 }

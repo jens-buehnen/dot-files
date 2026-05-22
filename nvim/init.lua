@@ -21,6 +21,7 @@ require("conform").setup({
 		bash = { "shfmt" },
 		fish = { "fish_indent" },
 		toml = { "taplo" },
+		json = { "deno_fmt" },
 		format_on_save = {
 			timeout_ms = 500,
 			lsp_format = "fallback",
