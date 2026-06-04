@@ -2,15 +2,16 @@
 window#waybar {
   font-family: JetBrainsMono NFM;
   font-size: 16px;
-  border: 2px solid rgb(245, 194, 231);
+  border: 2px solid @pink;
+  color: @text;
 }
 tooltip {
-    background-color: #1e1e2e;
-    border: 2px solid rgb(245, 194, 231);
+    background-color: @base;
+    border: 2px solid @pink;
     border-radius: 0px;
 }
 #workspaces button {
   padding: 0 2px;
   background-color: transparent;
-  color: #ffffff;
+  color: @text;
 }
