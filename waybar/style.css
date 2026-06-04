@@ -4,6 +4,11 @@ window#waybar {
   font-size: 16px;
   border: 2px solid rgb(245, 194, 231);
 }
+tooltip {
+    background-color: #1e1e2e;
+    border: 2px solid rgb(245, 194, 231);
+    border-radius: 0px;
+}
 #workspaces button {
   padding: 0 2px;
   background-color: transparent;
