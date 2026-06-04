@@ -68,7 +68,8 @@
       "on-click": "alacritty -e jolt"
     },
     "dwl/window": {
-      "format": "[{layout}] {title}"
+      "format": "[{layout}] {title}",
+      "max-length": 70
     },
     "pulseaudio": {
       "format": "[Vol:{volume}%]",
