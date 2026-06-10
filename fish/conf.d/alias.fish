@@ -48,3 +48,4 @@ alias nvf='nix run github:notashelf/nvf#maximal --extra-experimental-features "n
 alias lb='/opt/ladybird/usr/bin/Ladybird'
 alias vid='mpv --vo=tct --really-quiet yes --profile=sw-fast'
 alias l='za'
+alias c='z'
