@@ -29,8 +29,8 @@ menu:
     desc: Open Steam
     cmd: steam
   - key: "p"
-    desc: Open Prism Launcher
-    cmd: prismlauncher
+    desc: Open Pandora Launcher
+    cmd: pandora-launcher
   - key: "e"
     desc: Open Bemoji
     cmd: bemoji
