@@ -29,7 +29,7 @@ menu:
     desc: Open Steam
     cmd: steam
   - key: "p"
-    desc: Open Pandora Launcher
+    desc: Open Pandora 
     cmd: pandora-launcher
   - key: "e"
     desc: Open Bemoji
