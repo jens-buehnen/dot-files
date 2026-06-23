@@ -28,9 +28,15 @@ menu:
   - key: "s"
     desc: Open Steam
     cmd: steam
-  - key: "p"
-    desc: Open Pandora 
-    cmd: pandora-launcher
+  - key: "m"
+    desc: Minecraft
+    submenu:
+      - key: "p"
+        desc: Open Pandora 
+        cmd: pandora-launcher
+      - key: "l"
+        desc: Open Prism Launcher 
+        cmd: prismlauncher
   - key: "e"
     desc: Open Bemoji
     cmd: bemoji
