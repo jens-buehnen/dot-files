@@ -2,7 +2,7 @@
 window#waybar {
   font-family: JetBrainsMono NFM;
   font-size: 16px;
-  border: 2px solid @pink;
+  border: 2px solid @surface0;
   color: @text;
 }
 tooltip {
