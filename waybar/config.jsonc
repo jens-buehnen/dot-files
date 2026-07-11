@@ -34,7 +34,7 @@
               },
               "clock": {
                      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-                     "format-alt": "{:%Y-%m-%d}"
+                     "format-alt": " {:%Y-%m-%d} "
               },
               "cpu": {
                      "format": "[CPU:{usage}%]",
@@ -68,8 +68,7 @@
                      "on-click": "alacritty -e jolt"
               },
               "mango/window": {
-                     "format": "[{app_id}:{title}]",
-                     "max-length": 70
+                     "format": "{title}"
               },
               "pulseaudio": {
                      "format": "[Vol:{volume}%]",
