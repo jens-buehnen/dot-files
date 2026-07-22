@@ -6,7 +6,8 @@
               "height": 30,
               "spacing": 4,
               "modules-left": [
-                     "ext/workspaces",
+                     "mango/workspaces",
+                     "mango/layout",
                      "mango/window"
               ],
               "modules-center": [
@@ -25,12 +26,14 @@
               "tray": {
                      "spacing": 10
               },
-              "ext/workspaces": {
-                     "format": "[{id}]",
-                     "ignore-hidden": true,
+              "mango/workspaces": {
+                     "format": "[{value}]",
+                     "hide-empty": true,
                      "on-click": "activate",
-                     "on-click-right": "deactivate",
-                     "sort-by-id": true
+                     "on-click-right": "toggle"
+              },
+              "mango/layout": {
+                     "format": "[{}]"
               },
               "clock": {
                      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
