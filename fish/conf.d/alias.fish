@@ -1,6 +1,6 @@
-alias zl='eza -al --color=always --group-directories-first --icons'
-alias za='eza -alh --color=always --group-directories-first --icons'
-alias zt='eza -aT --color=always --group-directories-first --icons'
+alias zl='eza -al --color=always --group-directories-first --icons=always'
+alias za='eza -alh --color=always --group-directories-first --icons=always'
+alias zt='eza -aT --color=always --group-directories-first --icons=always'
 alias fixpacman="doas rm -rf /var/lib/pacman/db.lck"
 alias wget='wget -c '
 alias ..='cd ..'
