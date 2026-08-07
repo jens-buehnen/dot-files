@@ -5,6 +5,7 @@ volume_change_sound = "/usr/share/sounds/freedesktop/stereo/audio-volume-change.
 
 [bar.default]
 capsule_radius = 0
+thickness = 30
 margin_ends = 0
 radius = 0
 shadow = false
