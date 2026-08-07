@@ -1,0 +1,29 @@
+[audio]
+enable_sounds = true
+sound_volume = 1
+volume_change_sound = "/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+
+[bar.default]
+capsule_radius = 0
+margin_ends = 0
+radius = 0
+shadow = false
+start = ["wallpaper", "workspaces"]
+
+[battery]
+warning_threshold = 15
+
+[dock]
+radius = 0
+shadow = false
+
+[shell]
+corner_radius_scale = 0.0
+font_family = "JetBrainsMono NFM"
+polkit_agent = true
+animation.enabled = false
+panel.shadow = false
+
+[theme]
+community_palette = "Catppuccin Mocha Pink"
+source = "community"
