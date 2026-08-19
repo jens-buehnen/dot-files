@@ -1,93 +1,38 @@
-require("pack")
-vim.cmd.colorscheme("catppuccin")
+require("plugins")
+vim.cmd.colorscheme("catppuccin-nvim")
+require("conform").setup({
+	formatters_by_ft = {
+		lua = { "stylua" },
+		python = { "isort", "black" },
+		rust = { "rustfmt", lsp_format = "fallback" },
+		bash = { "shfmt" },
+		fish = { "fish_indent" },
+		toml = { "taplo" },
+		json = { "jq" },
+		jsonc = { "jq" },
+	},
+	format_on_save = {
+		timeout_ms = 500,
+		lsp_format = "fallback",
+	},
+})
+require("guess-indent").setup()
+require("nvim-treesitter").install({ "lua", "python", "rust", "bash", "fish", "toml", "json" })
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "<filetype>" },
+	callback = function()
+		vim.treesitter.start()
+	end,
+})
+require("lualine").setup()
+vim.lsp.enable({ "lua_ls", "pyright", "rust_analyzer", "bashls", "fish_lsp" })
 require("mini.cmdline").setup()
 require("mini.tabline").setup()
 require("mini.snippets").setup()
 require("mini.comment").setup()
 require("mini.cursorword").setup()
 require("mini.map").setup()
-require("lualine").setup()
-require("conform").setup({
-	formatters_by_ft = {
-		rust = { "rustfmt", lsp_format = "fallback" },
-		lua = { "stylua" },
-		bash = { "shfmt" },
-		fish = { "fish_indent" },
-		toml = { "taplo" },
-		json = { "jq" },
-		jsonc = { "jq" },
-		format_on_save = {
-			timeout_ms = 500,
-			lsp_format = "fallback",
-		},
-	},
-})
-local hipatterns = require("mini.hipatterns")
-hipatterns.setup({
-	highlighters = {
-		fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
-		hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
-		todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
-		note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
-		hex_color = hipatterns.gen_highlighter.hex_color(),
-	},
-})
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function(args)
-		require("conform").format({ bufnr = args.buf })
-	end,
-})
-vim.keymap.set("n", "<Leader>mc", MiniMap.close)
-vim.keymap.set("n", "<Leader>mf", MiniMap.toggle_focus)
-vim.keymap.set("n", "<Leader>mo", MiniMap.open)
-vim.keymap.set("n", "<Leader>mr", MiniMap.refresh)
-vim.keymap.set("n", "<Leader>ms", MiniMap.toggle_side)
-vim.keymap.set("n", "<Leader>mt", MiniMap.toggle)
 vim.o.cursorline = true
 vim.o.number = true
 vim.o.termguicolors = true
-vim.opt.clipboard = "unnamedplus"
-vim.g.clipboard = {
-	name = "wl-clipboard",
-	copy = {
-		["+"] = "wl-copy --foreground --type text/plain",
-		["*"] = "wl-copy --foreground --primary --type text/plain",
-	},
-	paste = {
-		["+"] = function()
-			return vim.fn.systemlist("wl-paste --no-newline", { "" }, 1)
-		end,
-		["*"] = function()
-			return vim.fn.systemlist("wl-paste --primary --no-newline", { "" }, 1)
-		end,
-	},
-	cache_enabled = true,
-}
-vim.api.nvim_create_user_command("PackUpdate", function()
-	vim.pack.update()
-end, { desc = "Update all vim.pack plugins" })
-local cmp = require("cmp")
-local luasnip = require("luasnip")
-
--- Load VS Code snippets if available
-require("luasnip.loaders.from_vscode").lazy_load()
-cmp.setup({
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body)
-		end,
-	},
-	mapping = cmp.mapping.preset.insert({
-		["<C-b>"] = cmp.mapping.scroll_docs(-4),
-		["<C-f>"] = cmp.mapping.scroll_docs(4),
-		["<C-Space>"] = cmp.mapping.complete(),
-		["<C-e>"] = cmp.mapping.close(),
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
-	}),
-	sources = {
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
-		{ name = "buffer" },
-	},
-})
+MiniMap.open()
