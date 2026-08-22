@@ -36,3 +36,20 @@ vim.o.cursorline = true
 vim.o.number = true
 vim.o.termguicolors = true
 MiniMap.open()
+vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = {
+	name = "wl-clipboard",
+	copy = {
+		["+"] = "wl-copy --foreground --type text/plain",
+		["*"] = "wl-copy --foreground --primary --type text/plain",
+	},
+	paste = {
+		["+"] = function()
+			return vim.fn.systemlist("wl-paste --no-newline", { "" }, 1)
+		end,
+		["*"] = function()
+			return vim.fn.systemlist("wl-paste --primary --no-newline", { "" }, 1)
+		end,
+	},
+	cache_enabled = true,
+}
